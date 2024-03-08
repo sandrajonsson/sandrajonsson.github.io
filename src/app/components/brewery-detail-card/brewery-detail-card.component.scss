@@ -1,0 +1,74 @@
+@use "../../shared/style/design-tokens.scss" as dt;
+
+.listItem {
+  list-style-position: inside;
+  list-style-type: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+  transition: all 250ms ease-out;
+  & a {
+    box-sizing: border-box;
+    display: block;
+    text-decoration: none;
+    padding: 14px 16px;
+    color: inherit;
+  }
+  &:hover {
+    background-color: dt.$bg-accent-hov;
+  }
+  &:active {
+    box-shadow: none;
+    transform: translateY(1px);
+  }
+}
+
+.listItem__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.listItem__title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  & img {
+    width: 32px;
+  }
+}
+
+.details__wrapper {
+  display: flex;
+  gap: 8px;
+  & > div {
+    flex: 1 1 0px;
+  }
+}
+
+.details__location,
+.details__contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.phone__link {
+  margin-top: 8px;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  display: inline;
+}
+
+.website__link {
+  margin-top: 8px;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  & img {
+    width: 20px;
+  }
+}

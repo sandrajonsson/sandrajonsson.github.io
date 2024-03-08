@@ -1,0 +1,26 @@
+@use "../design-tokens.scss" as dt;
+
+.h1 {
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 72px;
+}
+
+.h2 {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.subtitle {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: dt.$text-light;
+}
+
+.body {
+  font-size: 14px;
+  line-height: 22px;
+}

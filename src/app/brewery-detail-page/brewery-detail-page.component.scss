@@ -1,0 +1,63 @@
+@use "../shared/style/design-tokens.scss" as dt;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 0px;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  & > * {
+    width: 100%;
+    max-width: 640px;
+  }
+}
+
+.backBtn {
+  width: fit-content;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 24px 0px;
+  & img {
+    width: 200px;
+  }
+}
+
+.details__wrapper {
+  width: fit-content;
+  padding: 24px 51px;
+  display: flex;
+  gap: 8px;
+  background-color: dt.$bg-accent;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+  & > div {
+    flex: 1 1 0px;
+  }
+}
+
+.details__column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.breweryFavicon {
+  width: 24px;
+}
+
+.phone__link {
+  margin-top: 8px;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  display: inline;
+}

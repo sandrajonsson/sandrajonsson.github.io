@@ -1,0 +1,33 @@
+<li class="listItem">
+  <a
+    routerLink="/brewery-detail"
+    routerLinkActive="active"
+    ariaCurrentWhenActive="page"
+    [state]="brewery"
+  >
+    <div class="details__wrapper">
+      <div class="details__contactInfo">
+        <app-typography type="h2">
+          {{ brewery.name }}
+        </app-typography>
+        <app-typography
+          ><b>Brewery Type:</b> {{ brewery.brewery_type }}</app-typography
+        >
+      </div>
+      <div class="details__location">
+        <app-typography>
+          @if(!brewery.address_1 && !brewery.address_2 && !brewery.address_3) {
+          <b>No venue</b> } @else {
+          <b>Address 1:</b>
+          {{ brewery.address_1 }}
+          @if(brewery.address_3) { <b>(+2)</b> } @else if (brewery.address_3){
+          <b>(+1)</b> } }
+        </app-typography>
+        <app-typography
+          >{{ brewery.city || "" }},
+          {{ brewery.state_province || "" }}</app-typography
+        >
+      </div>
+    </div>
+  </a>
+</li>

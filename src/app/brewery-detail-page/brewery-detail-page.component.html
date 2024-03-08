@@ -1,0 +1,70 @@
+<app-link type="back" routerLink="/" routerLinkActive="active">
+  Go back
+</app-link>
+
+<div class="header">
+  <img
+    src="/assets/illustrations/drink.png"
+    alt="drinking-glass-illustration"
+  />
+  <app-typography type="h1">{{ brewery.name }}</app-typography>
+</div>
+
+<div class="details__wrapper">
+  <div class="details__column">
+    <app-typography type="h2"><b>Contact info:</b></app-typography>
+
+    @if(brewery.phone) {
+    <app-typography type="body"
+      ><b>phone: </b>
+      <app-link href="tel:{{ brewery.phone }}">
+        {{ brewery.phone }}
+      </app-link></app-typography
+    >
+    } @else { - } @if(brewery.website_url) {
+    <app-typography type="body"
+      ><b style="vertical-align: super">website: </b>
+      <app-link
+        size="small"
+        type="external"
+        target="_blank"
+        href="{{ brewery.website_url }}"
+      >
+        Link
+      </app-link></app-typography
+    >
+    }
+    <br />
+    <app-typography type="h2"><b>General info:</b></app-typography>
+    <app-typography type="body"
+      ><b>Brewery Type:</b> {{ brewery.brewery_type }}</app-typography
+    >
+  </div>
+  <div class="details__column">
+    <app-typography type="h2"><b>Location:</b></app-typography>
+    <app-typography>
+      @if(!brewery.address_1 && !brewery.address_2 && !brewery.address_3) {
+      <b>No venue</b> } @else { <b>Address 1: </b>{{ brewery.address_1 }}
+      @if(brewery.address_2) {
+      <b>Address 2: </b>{{ brewery.address_2 }} } @if(brewery.address_3) {
+      <b>Address 3: </b>{{ brewery.address_3 }} } }
+    </app-typography>
+    <app-typography
+      >{{ brewery.city || "" }}, {{ brewery.state_province || "" }}
+      {{ brewery.postal_code || "" }}</app-typography
+    >
+    <app-typography>{{ brewery.country || "" }}</app-typography>
+    @if(brewery.longitude && brewery.latitude) {
+    <app-typography type="body"
+      ><b>Coordinates:</b> ({{ brewery.latitude }}, {{ brewery.longitude }})
+    </app-typography>
+    }
+  </div>
+</div>
+
+<!-- <img
+  src="{{ brewery.website_url }}/favicon.ico"
+  onerror="this.src = '/assets/icons/hop.png'"
+  alt="brewery-logo"
+  height="26px"
+/> -->
