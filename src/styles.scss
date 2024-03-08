@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@use "../src/app/shared/style/design-tokens.scss" as dt;
+
+/* Global styles */
+html,
+body {
+  background-color: rgb(255 251 235);
+
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

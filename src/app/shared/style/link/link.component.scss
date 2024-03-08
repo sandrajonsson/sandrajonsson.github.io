@@ -1,0 +1,45 @@
+@use "../design-tokens.scss" as dt;
+
+.main {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  text-decoration-line: none;
+  outline-width: 0px;
+  color: dt.$text;
+  &:focus-visible {
+    outline: dt.$focus solid 1px;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  &:hover {
+    & > .text:after {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+}
+
+.text {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  &:after {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    top: 90%;
+    left: 0px;
+    transform: scaleX(0);
+    transform-origin: left top;
+    transition: transform 0.3s ease-out 0s, opacity 0.3s ease-out 0s;
+    background-color: currentColor;
+  }
+  &:active::after {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}

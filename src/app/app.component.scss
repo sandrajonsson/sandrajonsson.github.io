@@ -1,0 +1,29 @@
+@use "./shared/style/design-tokens.scss" as dt;
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+footer {
+  border-top: 4px solid dt.$text;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+
+  background-image: radial-gradient(dt.$text 1px, transparent 0);
+  background-size: 5px 5px;
+}
+
+.footer__text {
+  border: 1px solid dt.$text;
+  padding: 10px 18px;
+  background-color: dt.$bg-main;
+}

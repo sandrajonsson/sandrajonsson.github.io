@@ -1,0 +1,46 @@
+<div class="header">
+  <img src="/assets/illustrations/barrel-left.png" alt="barrel-illustration" />
+  <div class="title__wrapper">
+    <app-typography type="h1">Brewery finder</app-typography>
+    <app-typography type="subtitle"
+      >A guide to breweries, cideries, brewpubs, and bottleshops in North
+      America.</app-typography
+    >
+  </div>
+  <img src="/assets/illustrations/barrel-right.png" alt="barrel-illustration" />
+</div>
+
+<form
+  class="searchForm"
+  role="search"
+  autocomplete="off"
+  (submit)="submit($event)"
+>
+  <label hidden for="brewery-search-input"
+    >Brewery name, city, postalcode, or type
+  </label>
+  <input
+    type="text"
+    class="search__input"
+    id="brewery-search-input"
+    placeholder="Ex. The Tap Brewing Company, 100 Washington St..."
+    [formControl]="searchFieldControl"
+  />
+  <button class="search__button" type="submit">Search</button>
+</form>
+
+<div class="resultArea">
+  @switch (searchState.state) { @case ("loading") {
+  <div class="info__card">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+  } @case ("noMatch") {
+  <div class="info__card">No match found.</div>
+  } @case ("matchFound") {
+  <ul class="resultList__wrapper">
+    @for (brewery of searchState.data; track brewery.id) {
+    <app-brewery-detail-card [brewery]="brewery"></app-brewery-detail-card>
+    }
+  </ul>
+  } }
+</div>
