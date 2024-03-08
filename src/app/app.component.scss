@@ -11,19 +11,19 @@
 }
 
 footer {
-  border-top: 4px solid black;
+  border-top: 4px solid dt.$text;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 64px;
 
-  background-image: radial-gradient(black 1px, transparent 0);
+  background-image: radial-gradient(dt.$text 1px, transparent 0);
   background-size: 5px 5px;
 }
 
 .footer__text {
   border: 1px solid dt.$text;
   padding: 10px 18px;
-  background-color: dt.$yellow-light;
+  background-color: dt.$bg-main;
 }

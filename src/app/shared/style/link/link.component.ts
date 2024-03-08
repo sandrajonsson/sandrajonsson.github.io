@@ -17,6 +17,4 @@ export class LinkComponent {
   @Input() href = '';
   @Input() class = '';
   @Input() target = '';
-  @Input() routerLink = '';
-  @Input() routerLinkActive = '';
 }

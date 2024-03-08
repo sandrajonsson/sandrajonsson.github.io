@@ -1,14 +1,9 @@
-<a
-  class="main {{ class }}"
-  href="{{ href }}"
-  target="{{ target }}"
-  routerLink="{{ routerLink }}"
-  routerLinkActive="{{ routerLinkActive }}"
-  ariaCurrentWhenActive="page"
->
+<a class="main {{ class }}" href="{{ href }}" target="{{ target }}">
   @switch (type) { @case ("external") {
-  <img src="../../../../assets/icons/external-link.svg" alt="external-icon"
-  [height]="(size === 'small') ? 18 : 24"
+  <img
+    src="../../../../assets/icons/external-link.svg"
+    alt="external-icon"
+    [height]="size === 'small' ? 18 : 24"
   />
   } @case ("back") {
   <img src="../../../../assets/icons/arrow-back.svg" alt="back-icon" />

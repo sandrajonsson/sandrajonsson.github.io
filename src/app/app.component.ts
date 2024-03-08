@@ -11,14 +11,14 @@ import { LinkComponent } from './shared/style/link/link.component';
   standalone: true,
   imports: [
     RouterOutlet,
+    ReactiveFormsModule,
+    LinkComponent,
+    TypographyComponent,
     BreweryFormComponent,
     BreweryDetailPageComponent,
-    ReactiveFormsModule,
-    TypographyComponent,
-    LinkComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss', './shared/style/design-components.scss'],
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'brewery-search';
