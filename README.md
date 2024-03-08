@@ -8,7 +8,7 @@ Framework: [Angular CLI](https://github.com/angular/angular-cli) ([version 17.2.
 
 API: [Open Brewery DB](https://www.openbrewerydb.org/)
 
-Hosted on: githubPages, [go check it out!](https://www.openbrewerydb.org/)
+Hosted on: githubPages, [go check it out!](https://sandrajonsson.github.io/)
 
 ## Development
 
