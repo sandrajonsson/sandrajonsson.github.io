@@ -3,20 +3,20 @@ import { Router } from '@angular/router';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Observable, map, startWith, switchMap } from 'rxjs';
 
-import { BreweryDetailCardComponent } from '../components/brewery-detail-card/brewery-detail-card.component';
+import { DetailCardComponent } from '../detail-card/detail-card.component';
 import {
   BreweryApiService,
   httpReqState,
-} from '../shared/api/brewery-api.service';
-import { TypographyComponent } from '../shared/style/typography/typography.component';
-import { LoadingSpinnerComponent } from '../components/loading-spinner/loading-spinner.component';
+} from '../../shared/api/brewery-api.service';
+import { TypographyComponent } from '../../shared/style/typography/typography.component';
+import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
 
 @Component({
   selector: 'app-brewery-form',
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    BreweryDetailCardComponent,
+    DetailCardComponent,
     TypographyComponent,
     LoadingSpinnerComponent,
   ],

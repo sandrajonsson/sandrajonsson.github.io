@@ -1,4 +1,4 @@
-@use "../shared/style/design-tokens.scss" as dt;
+@use "../../shared/style/design-tokens.scss" as dt;
 
 :host {
   display: flex;
@@ -40,14 +40,14 @@
 
   height: 32px;
   padding: 0px 8px;
-  border: 2px solid dt.$text;
+  border: 2px solid dt.$border;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   flex-grow: 1;
-  background-color: white;
+  background-color: dt.$bg-accent;
   transition: box-shadow 300ms ease-out;
   &:focus {
-    box-shadow: inset dt.$text-light 0px 0px 0px 1px;
+    box-shadow: inset dt.$border-accent 0px 0px 0px 1px;
   }
 }
 
@@ -55,26 +55,26 @@
   all: unset;
 
   cursor: pointer;
-  border: 2px solid dt.$text;
+  border: 2px solid dt.$border;
   border-left: none;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   height: 32px;
   padding: 0px 8px;
-  background-color: dt.$text;
-  color: white;
+  background-color: dt.$bg-btn-primary;
+  color: dt.$con-btn-primary;
   transition: box-shadow 300ms ease-out;
   &:active {
-    box-shadow: inset dt.$text-light 1px 1px 1px 0px;
+    box-shadow: inset dt.$border-accent 1px 1px 1px 0px;
   }
 }
 
 .resultArea {
   padding: 18px;
-  border: 2px solid dt.$text;
+  border: 2px solid dt.$border;
   border-radius: 8px;
   flex-grow: 1;
-  background-color: white;
+  background-color: dt.$bg-accent;
 }
 
 .info__card {

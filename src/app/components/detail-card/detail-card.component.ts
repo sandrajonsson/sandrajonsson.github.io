@@ -5,12 +5,12 @@ import { LinkComponent } from '../../shared/style/link/link.component';
 import { TypographyComponent } from '../../shared/style/typography/typography.component';
 
 @Component({
-  selector: 'app-brewery-detail-card',
+  selector: 'app-detail-card',
   standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive, LinkComponent, TypographyComponent],
-  templateUrl: './brewery-detail-card.component.html',
-  styleUrl: './brewery-detail-card.component.scss',
+  templateUrl: './detail-card.component.html',
+  styleUrl: './detail-card.component.scss',
 })
-export class BreweryDetailCardComponent {
+export class DetailCardComponent {
   @Input() brewery: Brewery = { id: '' };
 }

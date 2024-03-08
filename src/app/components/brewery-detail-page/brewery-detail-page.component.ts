@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Brewery } from '../shared/api/brewery-api.service';
-import { LinkComponent } from '../shared/style/link/link.component';
-import { TypographyComponent } from '../shared/style/typography/typography.component';
+import { Brewery } from '../../shared/api/brewery-api.service';
+import { LinkComponent } from '../../shared/style/link/link.component';
+import { TypographyComponent } from '../../shared/style/typography/typography.component';
 
 @Component({
   selector: 'app-brewery-detail',

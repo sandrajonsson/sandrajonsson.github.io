@@ -39,7 +39,7 @@
   } @case ("matchFound") {
   <ul class="resultList__wrapper">
     @for (brewery of searchState.data; track brewery.id) {
-    <app-brewery-detail-card [brewery]="brewery"></app-brewery-detail-card>
+    <app-detail-card [brewery]="brewery"></app-detail-card>
     }
   </ul>
   } }

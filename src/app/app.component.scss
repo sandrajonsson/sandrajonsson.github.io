@@ -11,7 +11,7 @@
 }
 
 footer {
-  border-top: 4px solid dt.$text;
+  border-top: 4px solid dt.$border;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -23,7 +23,7 @@ footer {
 }
 
 .footer__text {
-  border: 1px solid dt.$text;
+  border: 1px solid dt.$border;
   padding: 10px 18px;
   background-color: dt.$bg-main;
 }

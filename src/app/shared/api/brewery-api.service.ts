@@ -6,7 +6,6 @@ import {
   forkJoin,
   map,
   retry,
-  startWith,
   throwError,
 } from 'rxjs';
 
@@ -30,21 +29,21 @@ type BREWERY_TYPES =
 
 export type Brewery = {
   id: string;
-  name?: string;
-  brewery_type?: BREWERY_TYPES;
   address_1?: string | null;
   address_2?: string | null;
   address_3?: string | null;
+  brewery_type?: BREWERY_TYPES;
   city?: string;
-  state_province?: string;
-  postal_code?: string;
   country?: string;
-  longitude?: string | null;
   latitude?: string | null;
+  longitude?: string | null;
+  name?: string;
   phone?: string | null;
-  website_url?: string | null;
+  postal_code?: string;
+  state_province?: string;
   state?: string;
   street?: string | null;
+  website_url?: string | null;
 };
 
 type state = 'init' | 'loading' | 'matchFound' | 'noMatch' | 'error';
